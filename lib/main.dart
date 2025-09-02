@@ -102,48 +102,60 @@ class StatsPage extends StatelessWidget {
   @override 
   Widget build(BuildContext context) { 
     return Scaffold(  
-      appBar: AppBar(  
-        title: Text("$playerName's Statistics for League '$leagueName'"),
-      ),
+      appBar: buildMainAppBar("Music League: $leagueName"), 
       body: Center(  
         child: SingleChildScrollView(  
           child: Column( 
             children: [
-              // Center( 
-              //   child: Container( 
-              //     padding: const EdgeInsets.all(16), 
-              //     color: Colors.blue[50], 
-              //     child: LineChart( 
-              //       LineChartData( 
-              //         borderData: FlBorderData(show: true), 
-              //         titlesData: FlTitlesData( 
-              //           bottomTitles: AxisTitles( 
-              //             sideTitles: SideTitles( 
-              //               showTitles: true, 
-              //               getTitlesWidget: (value, meta) { 
-              //                 return Text("R${value.toInt() + 1}");
-              //               },
-              //             ),
-              //           ),
-              //           leftTitles: AxisTitles( 
-              //             sideTitles: SideTitles( showTitles: true), 
-              //           ),
-              //         ) ,
-              //         lineBarsData: [
-              //           LineChartBarData( 
-              //             spots: List.generate( 
-              //               points.length, 
-              //               (index) => FlSpot(index.toDouble(), points[index].toDouble())), 
-              //             isCurved: true, 
-              //             color: Colors.deepPurple, 
-              //             barWidth: 3, 
-              //             dotData: FlDotData(show: true), 
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              Text(
+                "Statistics for $playerName", 
+                style: TextStyle( 
+                  fontSize: 24, 
+                  fontWeight: FontWeight.bold, 
+                )
+              ),
+
+              SizedBox(height: 50), 
+
+              Center( 
+                child: Container( 
+                  padding: const EdgeInsets.all(16), 
+                  color: Colors.blue[50], 
+                  child: SizedBox( 
+                    height: 300, 
+                    child: LineChart( 
+                      LineChartData( 
+                        borderData: FlBorderData(show: true), 
+                        titlesData: FlTitlesData( 
+                          bottomTitles: AxisTitles( 
+                            sideTitles: SideTitles( 
+                              showTitles: true, 
+                              getTitlesWidget: (value, meta) { 
+                                return Text("R${value.toInt() + 1}");
+                              },
+                            ),
+                          ),
+                          leftTitles: AxisTitles( 
+                            sideTitles: SideTitles( showTitles: true), 
+                          ),
+                        ) ,
+                        lineBarsData: [
+                          LineChartBarData( 
+                            spots: List.generate( 
+                              points.length, 
+                              (index) => 
+                                  FlSpot(index.toDouble(), points[index].toDouble())), 
+                            isCurved: true, 
+                            color: Colors.deepPurple, 
+                            barWidth: 3, 
+                            dotData: FlDotData(show: true), 
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
               Text("Points Received: "), 
               Text("[Plot of points per round?]"), 
