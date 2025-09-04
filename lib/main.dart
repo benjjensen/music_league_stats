@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/services.dart' show rootBundle; 
+import 'package:csv/csv.dart';
 
 void main() {
   runApp(MyApp()); 
@@ -23,74 +25,175 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
-  final List<String> leagues = ["Granny Smith", "Live the Riv", "Virginia is for (Music) Lovers"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: buildMainAppBar("Music Leagues"), 
-      body: GridView.extent(  
-        maxCrossAxisExtent: 500, 
-        padding: const EdgeInsets.all(16), 
-        crossAxisSpacing: 16, 
-        mainAxisSpacing: 16, 
-        children: leagues.map( (league) { 
-          return buildInkwellCard(league, context);
-        }).toList(),
-      ),
-    );
-  }
-}
-
-class LeaguePage extends StatelessWidget {
-  final String leagueName; 
-  final players = ["Benj", "Daniel", "Ian", "Chase", "Maren", "Emma", "Etc..."];
-
-  LeaguePage({ required this.leagueName });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(  
-      appBar: buildMainAppBar("Music Leagues"), 
-      body: Center( 
-        child: ConstrainedBox(  
-          constraints: BoxConstraints( 
-            minWidth: 300, 
-            maxWidth: 500, 
-            minHeight: 100, 
-            maxHeight: 800, //double.infinity, 
-          ),
-          child: Container( 
-            color: const Color.fromARGB(255, 214, 220, 224),
-            child: ListView.builder(  
-              padding: const EdgeInsets.all(16.0), 
-              itemCount: players.length, 
-              itemBuilder: (context, index) {
-                return ListTile(  
-                  title: Text(
-                    players[index], 
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ), 
-                  onTap: () {
-                    Navigator.push( 
-                      context, 
-                      MaterialPageRoute( 
-                        builder: (context) => StatsPage( 
-                          leagueName: leagueName, 
-                          playerName: players[index], 
-                        ),
-                      ),
-                    );
-                  },
+      body: ListView(  
+        children: leagueRounds.keys.map( (league) {
+          return Card(  
+            child: ListTile(  
+              title: Text(league), 
+              onTap: () { 
+                Navigator.push( 
+                  context,  
+                  MaterialPageRoute( 
+                    builder: (context) => LeaguePage(leagueName: league), 
+                  ),
                 );
               },
             ),
-          ),
-        ), 
-      ), 
+          );
+        }).toList(),
+      ),
+    );
+
+    //   body: GridView.extent(  
+    //     maxCrossAxisExtent: 500, 
+    //     padding: const EdgeInsets.all(16), 
+    //     crossAxisSpacing: 16, 
+    //     mainAxisSpacing: 16, 
+    //     children: leagues.map( (league) { 
+    //       return buildInkwellCard(league, context);
+    //     }).toList(),
+    //   ),
+    // );
+  }
+}
+
+class LeaguePage extends StatefulWidget {
+  final String leagueName; 
+  const LeaguePage({super.key, required this.leagueName});
+
+  @override
+  State<LeaguePage> createState() => _LeaguePageState(); 
+}
+
+class _LeaguePageState extends State<LeaguePage> {
+  String? selectedRound;
+  Future<List<List<dynamic>>>? data;
+
+  void _loadRound(String roundFile) {
+    setState(() {
+      selectedRound = roundFile;
+      data = loadLeagueRound(widget.leagueName, roundFile);
+    });
+  }
+
+  void _backToRounds() {
+    setState(() {
+      selectedRound = null;
+      data = null;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final rounds = leagueRounds[widget.leagueName]!;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.leagueName),
+        actions: [
+          if (selectedRound != null)
+            IconButton(
+              icon: const Icon(Icons.refresh), // "back to round picker"
+              onPressed: _backToRounds,
+              tooltip: "Back to rounds",
+            ),
+        ],
+      ),
+      body: selectedRound == null
+          ? ListView(
+              children: rounds.map((round) {
+                return ListTile(
+                  title: Text(round.replaceAll('.csv', '')),
+                  onTap: () => _loadRound(round),
+                );
+              }).toList(),
+            )
+          : FutureBuilder<List<List<dynamic>>>(
+              future: data,
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                final rows = snapshot.data!;
+
+                return ListView(
+                  children: rows.map((row) {
+                    return ListTile(
+                      title: Text(row[0].toString()), // voter/submitter
+                      subtitle: Text(row.skip(1).join(", ")), // their votes
+                    );
+                  }).toList(),
+                );
+              },
+            ),
     );
   }
 }
+
+// class _LeaguePageStart extends State<LeaguePage> {
+//   late Future<List<List<dynamic>>> _data; 
+
+//   @override  
+//   void initState() {
+//     super.initState(); 
+//     _data = loadCsvData(path); //////////////////////
+//   }
+
+// }
+// {
+//   final String leagueName; 
+//   final players = ["Benj", "Daniel", "Ian", "Chase", "Maren", "Emma", "Etc..."];
+
+//   LeaguePage({ required this.leagueName });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(  
+//       appBar: buildMainAppBar("Music Leagues"), 
+//       body: Center( 
+//         child: ConstrainedBox(  
+//           constraints: BoxConstraints( 
+//             minWidth: 300, 
+//             maxWidth: 500, 
+//             minHeight: 100, 
+//             maxHeight: 800, //double.infinity, 
+//           ),
+//           child: Container( 
+//             color: const Color.fromARGB(255, 214, 220, 224),
+//             child: ListView.builder(  
+//               padding: const EdgeInsets.all(16.0), 
+//               itemCount: players.length, 
+//               itemBuilder: (context, index) {
+//                 return ListTile(  
+//                   title: Text(
+//                     players[index], 
+//                     style: TextStyle(fontWeight: FontWeight.bold),
+//                   ), 
+//                   onTap: () {
+//                     Navigator.push( 
+//                       context, 
+//                       MaterialPageRoute( 
+//                         builder: (context) => StatsPage( 
+//                           leagueName: leagueName, 
+//                           playerName: players[index], 
+//                         ),
+//                       ),
+//                     );
+//                   },
+//                 );
+//               },
+//             ),
+//           ),
+//         ), 
+//       ), 
+//     );
+//   }
+// }
 
 class StatsPage extends StatelessWidget { 
   final String leagueName; 
@@ -220,3 +323,18 @@ AppBar buildMainAppBar(String title) {
     centerTitle: true,
   );
 }
+
+Future<List<List<dynamic>>> loadLeagueRound(String league, String roundFile) async {
+  final path = 'assets/data/$league/$roundFile';
+  final rawData = await rootBundle.loadString(path); 
+  return const CsvToListConverter().convert(rawData);
+}
+
+final leagueRounds = {
+  "virginia_is_for_music_lovers" : ["round1.csv", "round2.csv"], 
+  "live_the_riv" : ["round1.csv", "round2.csv"], 
+  "granny_smith" : ["round1.csv", "round2.csv"],
+};
+
+
+
