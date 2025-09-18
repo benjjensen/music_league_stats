@@ -1,0 +1,147 @@
+{
+  "people": [
+    {
+      "name": "Benj",
+      "scores": {
+        "biggestFanName": "Taylor",
+        "biggestFanScore": 36.0,
+        "biggestHaterName": "samreintjes",
+        "biggestHaterScore": 2.0,
+        "mostLikedName": "Taylor",
+        "mostLikedScore": 34.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 10.0
+      }
+    },
+    {
+      "name": "Brandon Snow",
+      "scores": {
+        "biggestFanName": "Rachel Miles Snow",
+        "biggestFanScore": 39.0,
+        "biggestHaterName": "danesvig",
+        "biggestHaterScore": 0.0,
+        "mostLikedName": "Rachel Miles Snow",
+        "mostLikedScore": 30.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 0.0
+      }
+    },
+    {
+      "name": "Harrison Nevels-Reeves",
+      "scores": {
+        "biggestFanName": "chay reeves",
+        "biggestFanScore": 29.0,
+        "biggestHaterName": "danesvig",
+        "biggestHaterScore": 0.0,
+        "mostLikedName": "chay reeves",
+        "mostLikedScore": 37.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 2.0
+      }
+    },
+    {
+      "name": "Rachel Miles Snow",
+      "scores": {
+        "biggestFanName": "Taylor",
+        "biggestFanScore": 41.0,
+        "biggestHaterName": "samreintjes",
+        "biggestHaterScore": 2.0,
+        "mostLikedName": "Brandon Snow",
+        "mostLikedScore": 39.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 5.0
+      }
+    },
+    {
+      "name": "Rachel Reynolds",
+      "scores": {
+        "biggestFanName": "Samantha Snow",
+        "biggestFanScore": 40.0,
+        "biggestHaterName": "danesvig",
+        "biggestHaterScore": 10.0,
+        "mostLikedName": "Samantha Snow",
+        "mostLikedScore": 50.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 5.0
+      }
+    },
+    {
+      "name": "Samantha Snow",
+      "scores": {
+        "biggestFanName": "Whitney Elsholz",
+        "biggestFanScore": 74.0,
+        "biggestHaterName": "danesvig",
+        "biggestHaterScore": 0.0,
+        "mostLikedName": "Rachel Reynolds",
+        "mostLikedScore": 40.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 1.0
+      }
+    },
+    {
+      "name": "Taylor",
+      "scores": {
+        "biggestFanName": "Benj",
+        "biggestFanScore": 34.0,
+        "biggestHaterName": "danesvig",
+        "biggestHaterScore": 10.0,
+        "mostLikedName": "Rachel Miles Snow",
+        "mostLikedScore": 41.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 3.0
+      }
+    },
+    {
+      "name": "Whitney Elsholz",
+      "scores": {
+        "biggestFanName": "Rachel Reynolds",
+        "biggestFanScore": 28.0,
+        "biggestHaterName": "samreintjes",
+        "biggestHaterScore": 4.0,
+        "mostLikedName": "Samantha Snow",
+        "mostLikedScore": 74.0,
+        "leastLikedName": "danesvig",
+        "leastLikedScore": 7.0
+      }
+    },
+    {
+      "name": "chay reeves",
+      "scores": {
+        "biggestFanName": "Harrison Nevels-Reeves",
+        "biggestFanScore": 37.0,
+        "biggestHaterName": "Brandon Snow",
+        "biggestHaterScore": 8.0,
+        "mostLikedName": "Samantha Snow",
+        "mostLikedScore": 46.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 0.0
+      }
+    },
+    {
+      "name": "danesvig",
+      "scores": {
+        "biggestFanName": "samreintjes",
+        "biggestFanScore": 15.0,
+        "biggestHaterName": "Brandon Snow",
+        "biggestHaterScore": 0.0,
+        "mostLikedName": "Benj",
+        "mostLikedScore": 16.0,
+        "leastLikedName": "Brandon Snow",
+        "leastLikedScore": 0.0
+      }
+    },
+    {
+      "name": "samreintjes",
+      "scores": {
+        "biggestFanName": "Benj",
+        "biggestFanScore": 12.0,
+        "biggestHaterName": "chay reeves",
+        "biggestHaterScore": 0.0,
+        "mostLikedName": "chay reeves",
+        "mostLikedScore": 16.0,
+        "leastLikedName": "Brandon Snow",
+        "leastLikedScore": 0.0
+      }
+    }
+  ]
+}
