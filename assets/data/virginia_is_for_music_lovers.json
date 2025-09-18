@@ -1,0 +1,160 @@
+{
+  "people": [
+    {
+      "name": "Benj",
+      "scores": {
+        "biggestFanName": "Daniel",
+        "biggestFanScore": 81.0,
+        "biggestHaterName": "Josh Walker",
+        "biggestHaterScore": 22.0,
+        "mostLikedName": "Colt",
+        "mostLikedScore": 46.0,
+        "leastLikedName": "Jordan",
+        "leastLikedScore": 23.0
+      }
+    },
+    {
+      "name": "Chase",
+      "scores": {
+        "biggestFanName": "Josh Walker",
+        "biggestFanScore": 44.0,
+        "biggestHaterName": "marenskidmore",
+        "biggestHaterScore": 11.0,
+        "mostLikedName": "Reagan",
+        "mostLikedScore": 55.0,
+        "leastLikedName": "marenskidmore",
+        "leastLikedScore": 15.0
+      }
+    },
+    {
+      "name": "Colt",
+      "scores": {
+        "biggestFanName": "marenskidmore",
+        "biggestFanScore": 51.0,
+        "biggestHaterName": "Stephanie Ferweda",
+        "biggestHaterScore": 19.0,
+        "mostLikedName": "Reagan",
+        "mostLikedScore": 45.0,
+        "leastLikedName": "Chase",
+        "leastLikedScore": 21.0
+      }
+    },
+    {
+      "name": "Daniel",
+      "scores": {
+        "biggestFanName": "icook8662",
+        "biggestFanScore": 46.0,
+        "biggestHaterName": "Jordan",
+        "biggestHaterScore": 19.0,
+        "mostLikedName": "Benj",
+        "mostLikedScore": 81.0,
+        "leastLikedName": "Chase",
+        "leastLikedScore": 17.0
+      }
+    },
+    {
+      "name": "Emma Ebert",
+      "scores": {
+        "biggestFanName": "Jordan",
+        "biggestFanScore": 52.0,
+        "biggestHaterName": "Josh Walker",
+        "biggestHaterScore": 26.0,
+        "mostLikedName": "Stephanie Ferweda",
+        "mostLikedScore": 65.0,
+        "leastLikedName": "Reagan",
+        "leastLikedScore": 15.0
+      }
+    },
+    {
+      "name": "Jordan",
+      "scores": {
+        "biggestFanName": "Emma Ebert",
+        "biggestFanScore": 53.0,
+        "biggestHaterName": "Daniel",
+        "biggestHaterScore": 19.0,
+        "mostLikedName": "Emma Ebert",
+        "mostLikedScore": 52.0,
+        "leastLikedName": "Chase",
+        "leastLikedScore": 13.0
+      }
+    },
+    {
+      "name": "Josh Walker",
+      "scores": {
+        "biggestFanName": "Stephanie Ferweda",
+        "biggestFanScore": 68.0,
+        "biggestHaterName": "Chase",
+        "biggestHaterScore": 21.0,
+        "mostLikedName": "Stephanie Ferweda",
+        "mostLikedScore": 59.0,
+        "leastLikedName": "Benj",
+        "leastLikedScore": 22.0
+      }
+    },
+    {
+      "name": "Nicole",
+      "scores": {
+        "biggestFanName": "icook8662",
+        "biggestFanScore": 60.0,
+        "biggestHaterName": "Daniel",
+        "biggestHaterScore": 27.0,
+        "mostLikedName": "Stephanie Ferweda",
+        "mostLikedScore": 48.0,
+        "leastLikedName": "Reagan",
+        "leastLikedScore": 24.0
+      }
+    },
+    {
+      "name": "Reagan",
+      "scores": {
+        "biggestFanName": "Chase",
+        "biggestFanScore": 55.0,
+        "biggestHaterName": "Stephanie Ferweda",
+        "biggestHaterScore": 10.0,
+        "mostLikedName": "marenskidmore",
+        "mostLikedScore": 52.0,
+        "leastLikedName": "Chase",
+        "leastLikedScore": 22.0
+      }
+    },
+    {
+      "name": "Stephanie Ferweda",
+      "scores": {
+        "biggestFanName": "Emma Ebert",
+        "biggestFanScore": 65.0,
+        "biggestHaterName": "icook8662",
+        "biggestHaterScore": 14.0,
+        "mostLikedName": "Josh Walker",
+        "mostLikedScore": 68.0,
+        "leastLikedName": "Reagan",
+        "leastLikedScore": 10.0
+      }
+    },
+    {
+      "name": "icook8662",
+      "scores": {
+        "biggestFanName": "Stephanie Ferweda",
+        "biggestFanScore": 53.0,
+        "biggestHaterName": "Daniel",
+        "biggestHaterScore": 17.0,
+        "mostLikedName": "Nicole",
+        "mostLikedScore": 60.0,
+        "leastLikedName": "Stephanie Ferweda",
+        "leastLikedScore": 14.0
+      }
+    },
+    {
+      "name": "marenskidmore",
+      "scores": {
+        "biggestFanName": "Emma Ebert",
+        "biggestFanScore": 53.0,
+        "biggestHaterName": "Chase",
+        "biggestHaterScore": 15.0,
+        "mostLikedName": "Emma Ebert",
+        "mostLikedScore": 52.0,
+        "leastLikedName": "Chase",
+        "leastLikedScore": 11.0
+      }
+    }
+  ]
+}
