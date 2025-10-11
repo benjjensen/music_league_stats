@@ -4,182 +4,238 @@
       "name": "Benj",
       "scores": {
         "biggestFanName": "Nicole",
-        "biggestFanScore": 15.0,
+        "biggestFanScore": 32.0,
         "biggestHaterName": "Emma Ebert",
-        "biggestHaterScore": 3.0,
-        "mostLikedName": "Josh Walker",
-        "mostLikedScore": 16.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": 3.0
+        "biggestHaterScore": 7.0,
+        "mostLikedName": "Stephanie Ferweda",
+        "mostLikedScore": 33.0,
+        "leastLikedName": "Emma Ebert",
+        "leastLikedScore": 11.0,
+        "mostSimilarName": "Nicole",
+        "mostSimilarScore": 202.0,
+        "leastSimilarName": "Cameron",
+        "leastSimilarScore": 135.0
       }
     },
     {
       "name": "Cameron",
       "scores": {
         "biggestFanName": "Mallory Latimer",
-        "biggestFanScore": 13.0,
-        "biggestHaterName": "Colt",
-        "biggestHaterScore": 3.0,
-        "mostLikedName": "Colt",
-        "mostLikedScore": 20.0,
-        "leastLikedName": "marenskidmore",
-        "leastLikedScore": 3.0
+        "biggestFanScore": 27.0,
+        "biggestHaterName": "Daniel",
+        "biggestHaterScore": 7.0,
+        "mostLikedName": "Nicole",
+        "mostLikedScore": 47.0,
+        "leastLikedName": "Jordan",
+        "leastLikedScore": 6.0,
+        "mostSimilarName": "Mallory Latimer",
+        "mostSimilarScore": 166.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 99.0
       }
     },
     {
       "name": "Colt",
       "scores": {
-        "biggestFanName": "Cameron",
-        "biggestFanScore": 20.0,
-        "biggestHaterName": "Daniel",
+        "biggestFanName": "marenskidmore",
+        "biggestFanScore": 32.0,
+        "biggestHaterName": "Urim",
         "biggestHaterScore": 2.0,
-        "mostLikedName": "Jordan",
-        "mostLikedScore": 17.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": 1.0
+        "mostLikedName": "marenskidmore",
+        "mostLikedScore": 41.0,
+        "leastLikedName": "icook8662",
+        "leastLikedScore": 8.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 238.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 129.0
       }
     },
     {
       "name": "Daniel",
       "scores": {
         "biggestFanName": "Urim",
-        "biggestFanScore": 15.0,
-        "biggestHaterName": "Emma Ebert",
-        "biggestHaterScore": -1.0,
-        "mostLikedName": "marenskidmore",
-        "mostLikedScore": 7.0,
+        "biggestFanScore": 34.0,
+        "biggestHaterName": "brady.misustin",
+        "biggestHaterScore": 6.0,
+        "mostLikedName": "Urim",
+        "mostLikedScore": 33.0,
         "leastLikedName": "Stephanie Ferweda",
-        "leastLikedScore": -1.0
+        "leastLikedScore": 6.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 161.0,
+        "leastSimilarName": "brady.misustin",
+        "leastSimilarScore": 74.0
       }
     },
     {
       "name": "Emma Ebert",
       "scores": {
         "biggestFanName": "Jordan",
-        "biggestFanScore": 17.0,
-        "biggestHaterName": "Stephanie Ferweda",
-        "biggestHaterScore": 4.0,
-        "mostLikedName": "Mallory Latimer",
-        "mostLikedScore": 22.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": -1.0
+        "biggestFanScore": 37.0,
+        "biggestHaterName": "Benj",
+        "biggestHaterScore": 11.0,
+        "mostLikedName": "marenskidmore",
+        "mostLikedScore": 36.0,
+        "leastLikedName": "Benj",
+        "leastLikedScore": 7.0,
+        "mostSimilarName": "Jordan",
+        "mostSimilarScore": 199.0,
+        "leastSimilarName": "Cameron",
+        "leastSimilarScore": 109.0
       }
     },
     {
       "name": "Jordan",
       "scores": {
         "biggestFanName": "Stephanie Ferweda",
-        "biggestFanScore": 18.0,
-        "biggestHaterName": "Urim",
-        "biggestHaterScore": 2.0,
+        "biggestFanScore": 30.0,
+        "biggestHaterName": "Cameron",
+        "biggestHaterScore": 6.0,
         "mostLikedName": "Emma Ebert",
-        "mostLikedScore": 17.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": 0.0
+        "mostLikedScore": 37.0,
+        "leastLikedName": "brady.misustin",
+        "leastLikedScore": 10.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 239.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 127.0
       }
     },
     {
       "name": "Josh Walker",
       "scores": {
-        "biggestFanName": "icook8662",
-        "biggestFanScore": 21.0,
+        "biggestFanName": "Stephanie Ferweda",
+        "biggestFanScore": 42.0,
         "biggestHaterName": "Urim",
-        "biggestHaterScore": 3.0,
+        "biggestHaterScore": 13.0,
         "mostLikedName": "Stephanie Ferweda",
-        "mostLikedScore": 23.0,
+        "mostLikedScore": 50.0,
         "leastLikedName": "Daniel",
-        "leastLikedScore": 0.0
+        "leastLikedScore": 7.0,
+        "mostSimilarName": "Stephanie Ferweda",
+        "mostSimilarScore": 224.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 107.0
       }
     },
     {
       "name": "Mallory Latimer",
       "scores": {
-        "biggestFanName": "Emma Ebert",
-        "biggestFanScore": 22.0,
+        "biggestFanName": "Nicole",
+        "biggestFanScore": 36.0,
         "biggestHaterName": "Daniel",
-        "biggestHaterScore": 0.0,
-        "mostLikedName": "Colt",
-        "mostLikedScore": 16.0,
+        "biggestHaterScore": 9.0,
+        "mostLikedName": "Benj",
+        "mostLikedScore": 28.0,
         "leastLikedName": "Daniel",
-        "leastLikedScore": -1.0
+        "leastLikedScore": 8.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 231.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 108.0
       }
     },
     {
       "name": "Nicole",
       "scores": {
-        "biggestFanName": "Stephanie Ferweda",
-        "biggestFanScore": 17.0,
+        "biggestFanName": "Cameron",
+        "biggestFanScore": 47.0,
         "biggestHaterName": "Daniel",
-        "biggestHaterScore": 1.0,
-        "mostLikedName": "Josh Walker",
-        "mostLikedScore": 17.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": 0.0
+        "biggestHaterScore": 19.0,
+        "mostLikedName": "Urim",
+        "mostLikedScore": 44.0,
+        "leastLikedName": "marenskidmore",
+        "leastLikedScore": 6.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 202.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 129.0
       }
     },
     {
       "name": "Stephanie Ferweda",
       "scores": {
         "biggestFanName": "Josh Walker",
-        "biggestFanScore": 23.0,
+        "biggestFanScore": 50.0,
         "biggestHaterName": "Daniel",
-        "biggestHaterScore": -1.0,
+        "biggestHaterScore": 6.0,
         "mostLikedName": "Josh Walker",
-        "mostLikedScore": 19.0,
+        "mostLikedScore": 42.0,
         "leastLikedName": "brady.misustin",
-        "leastLikedScore": -1.0
+        "leastLikedScore": 7.0,
+        "mostSimilarName": "Josh Walker",
+        "mostSimilarScore": 224.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 106.0
       }
     },
     {
       "name": "Urim",
       "scores": {
-        "biggestFanName": "icook8662",
-        "biggestFanScore": 9.0,
-        "biggestHaterName": "brady.misustin",
-        "biggestHaterScore": 0.0,
+        "biggestFanName": "Nicole",
+        "biggestFanScore": 44.0,
+        "biggestHaterName": "Stephanie Ferweda",
+        "biggestHaterScore": 10.0,
         "mostLikedName": "icook8662",
-        "mostLikedScore": 30.0,
-        "leastLikedName": "Mallory Latimer",
-        "leastLikedScore": 0.0
+        "mostLikedScore": 48.0,
+        "leastLikedName": "Colt",
+        "leastLikedScore": 2.0,
+        "mostSimilarName": "Nicole",
+        "mostSimilarScore": 181.0,
+        "leastSimilarName": "Emma Ebert",
+        "leastSimilarScore": 122.0
       }
     },
     {
       "name": "brady.misustin",
       "scores": {
-        "biggestFanName": "Emma Ebert",
-        "biggestFanScore": 14.0,
-        "biggestHaterName": "Stephanie Ferweda",
-        "biggestHaterScore": -1.0,
+        "biggestFanName": "Cameron",
+        "biggestFanScore": 23.0,
+        "biggestHaterName": "icook8662",
+        "biggestHaterScore": 3.0,
         "mostLikedName": "Mallory Latimer",
-        "mostLikedScore": 11.0,
+        "mostLikedScore": 25.0,
         "leastLikedName": "Daniel",
-        "leastLikedScore": 0.0
+        "leastLikedScore": 6.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 164.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 74.0
       }
     },
     {
       "name": "icook8662",
       "scores": {
         "biggestFanName": "Urim",
-        "biggestFanScore": 30.0,
-        "biggestHaterName": "marenskidmore",
-        "biggestHaterScore": 0.0,
-        "mostLikedName": "Josh Walker",
-        "mostLikedScore": 21.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": 0.0
+        "biggestFanScore": 48.0,
+        "biggestHaterName": "Colt",
+        "biggestHaterScore": 8.0,
+        "mostLikedName": "Urim",
+        "mostLikedScore": 42.0,
+        "leastLikedName": "brady.misustin",
+        "leastLikedScore": 3.0,
+        "mostSimilarName": "Urim",
+        "mostSimilarScore": 178.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 82.0
       }
     },
     {
       "name": "marenskidmore",
       "scores": {
         "biggestFanName": "Colt",
-        "biggestFanScore": 14.0,
-        "biggestHaterName": "Josh Walker",
-        "biggestHaterScore": 0.0,
+        "biggestFanScore": 41.0,
+        "biggestHaterName": "Nicole",
+        "biggestHaterScore": 6.0,
         "mostLikedName": "Colt",
-        "mostLikedScore": 15.0,
-        "leastLikedName": "Daniel",
-        "leastLikedScore": 0.0
+        "mostLikedScore": 32.0,
+        "leastLikedName": "icook8662",
+        "leastLikedScore": 8.0,
+        "mostSimilarName": "Jordan",
+        "mostSimilarScore": 239.0,
+        "leastSimilarName": "Daniel",
+        "leastSimilarScore": 125.0
       }
     }
   ]

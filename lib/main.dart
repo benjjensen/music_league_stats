@@ -251,7 +251,9 @@ class _StatsPageState extends State<StatsPage> {
                     "\t\tBiggest Fan: ${scores['biggestFanName']} (${scores['biggestFanScore']} votes)\n" 
                     "\t\tBiggest Hater: ${scores['biggestHaterName']} (${scores['biggestHaterScore']} votes)\n" 
                     "\t\tMost Liked: ${scores['mostLikedName']} (${scores['mostLikedScore']} votes)\n" 
-                    "\t\tLeast Liked: ${scores['leastLikedName']} (${scores['leastLikedScore']} votes)" 
+                    "\t\tLeast Liked: ${scores['leastLikedName']} (${scores['leastLikedScore']} votes)\n"
+                    "\t\tMost Similar Voting: ${scores['mostSimilarName']} (${scores['mostSimilarScore']} votes)\n" 
+                    "\t\tLeast Similar Voting: ${scores['leastSimilarName']} (${scores['leastSimilarScore']} votes)" 
                   ),
                 ),
               );

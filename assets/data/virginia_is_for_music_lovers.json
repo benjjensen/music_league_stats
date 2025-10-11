@@ -10,7 +10,11 @@
         "mostLikedName": "Colt",
         "mostLikedScore": 46.0,
         "leastLikedName": "Jordan",
-        "leastLikedScore": 23.0
+        "leastLikedScore": 23.0,
+        "mostSimilarName": "Reagan",
+        "mostSimilarScore": 317.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 226.0
       }
     },
     {
@@ -23,7 +27,11 @@
         "mostLikedName": "Reagan",
         "mostLikedScore": 55.0,
         "leastLikedName": "marenskidmore",
-        "leastLikedScore": 15.0
+        "leastLikedScore": 15.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 226.0,
+        "leastSimilarName": "marenskidmore",
+        "leastSimilarScore": 178.0
       }
     },
     {
@@ -36,7 +44,11 @@
         "mostLikedName": "Reagan",
         "mostLikedScore": 45.0,
         "leastLikedName": "Chase",
-        "leastLikedScore": 21.0
+        "leastLikedScore": 21.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 335.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 217.0
       }
     },
     {
@@ -49,7 +61,11 @@
         "mostLikedName": "Benj",
         "mostLikedScore": 81.0,
         "leastLikedName": "Chase",
-        "leastLikedScore": 17.0
+        "leastLikedScore": 17.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 296.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 202.0
       }
     },
     {
@@ -62,7 +78,11 @@
         "mostLikedName": "Stephanie Ferweda",
         "mostLikedScore": 65.0,
         "leastLikedName": "Reagan",
-        "leastLikedScore": 15.0
+        "leastLikedScore": 15.0,
+        "mostSimilarName": "Jordan",
+        "mostSimilarScore": 339.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 179.0
       }
     },
     {
@@ -75,7 +95,11 @@
         "mostLikedName": "Emma Ebert",
         "mostLikedScore": 52.0,
         "leastLikedName": "Chase",
-        "leastLikedScore": 13.0
+        "leastLikedScore": 13.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 347.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 192.0
       }
     },
     {
@@ -88,7 +112,11 @@
         "mostLikedName": "Stephanie Ferweda",
         "mostLikedScore": 59.0,
         "leastLikedName": "Benj",
-        "leastLikedScore": 22.0
+        "leastLikedScore": 22.0,
+        "mostSimilarName": "Stephanie Ferweda",
+        "mostSimilarScore": 319.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 192.0
       }
     },
     {
@@ -101,7 +129,11 @@
         "mostLikedName": "Stephanie Ferweda",
         "mostLikedScore": 48.0,
         "leastLikedName": "Reagan",
-        "leastLikedScore": 24.0
+        "leastLikedScore": 24.0,
+        "mostSimilarName": "Stephanie Ferweda",
+        "mostSimilarScore": 327.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 209.0
       }
     },
     {
@@ -114,7 +146,11 @@
         "mostLikedName": "marenskidmore",
         "mostLikedScore": 52.0,
         "leastLikedName": "Chase",
-        "leastLikedScore": 22.0
+        "leastLikedScore": 22.0,
+        "mostSimilarName": "marenskidmore",
+        "mostSimilarScore": 326.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 211.0
       }
     },
     {
@@ -127,7 +163,11 @@
         "mostLikedName": "Josh Walker",
         "mostLikedScore": 68.0,
         "leastLikedName": "Reagan",
-        "leastLikedScore": 10.0
+        "leastLikedScore": 10.0,
+        "mostSimilarName": "Nicole",
+        "mostSimilarScore": 327.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 202.0
       }
     },
     {
@@ -140,7 +180,11 @@
         "mostLikedName": "Nicole",
         "mostLikedScore": 60.0,
         "leastLikedName": "Stephanie Ferweda",
-        "leastLikedScore": 14.0
+        "leastLikedScore": 14.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 294.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 210.0
       }
     },
     {
@@ -153,7 +197,11 @@
         "mostLikedName": "Emma Ebert",
         "mostLikedScore": 52.0,
         "leastLikedName": "Chase",
-        "leastLikedScore": 11.0
+        "leastLikedScore": 11.0,
+        "mostSimilarName": "Jordan",
+        "mostSimilarScore": 347.0,
+        "leastSimilarName": "Chase",
+        "leastSimilarScore": 178.0
       }
     }
   ]

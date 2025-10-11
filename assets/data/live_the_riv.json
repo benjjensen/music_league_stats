@@ -3,131 +3,171 @@
     {
       "name": "Benj",
       "scores": {
-        "biggestFanName": "Taylor",
-        "biggestFanScore": 36.0,
+        "biggestFanName": "Rachel Reynolds",
+        "biggestFanScore": 39.0,
         "biggestHaterName": "samreintjes",
         "biggestHaterScore": 2.0,
         "mostLikedName": "Taylor",
-        "mostLikedScore": 34.0,
-        "leastLikedName": "danesvig",
-        "leastLikedScore": 10.0
+        "mostLikedScore": 40.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 12.0,
+        "mostSimilarName": "Samantha Snow",
+        "mostSimilarScore": 239.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 50.0
       }
     },
     {
       "name": "Brandon Snow",
       "scores": {
         "biggestFanName": "Rachel Miles Snow",
-        "biggestFanScore": 39.0,
-        "biggestHaterName": "danesvig",
+        "biggestFanScore": 45.0,
+        "biggestHaterName": "samreintjes",
         "biggestHaterScore": 0.0,
         "mostLikedName": "Rachel Miles Snow",
-        "mostLikedScore": 30.0,
-        "leastLikedName": "danesvig",
-        "leastLikedScore": 0.0
+        "mostLikedScore": 44.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 9.0,
+        "mostSimilarName": "Rachel Miles Snow",
+        "mostSimilarScore": 218.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 26.0
       }
     },
     {
       "name": "Harrison Nevels-Reeves",
       "scores": {
         "biggestFanName": "chay reeves",
-        "biggestFanScore": 29.0,
-        "biggestHaterName": "danesvig",
-        "biggestHaterScore": 0.0,
+        "biggestFanScore": 45.0,
+        "biggestHaterName": "samreintjes",
+        "biggestHaterScore": 5.0,
         "mostLikedName": "chay reeves",
-        "mostLikedScore": 37.0,
-        "leastLikedName": "danesvig",
-        "leastLikedScore": 2.0
+        "mostLikedScore": 49.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 3.0,
+        "mostSimilarName": "chay reeves",
+        "mostSimilarScore": 212.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 39.0
       }
     },
     {
       "name": "Rachel Miles Snow",
       "scores": {
-        "biggestFanName": "Taylor",
-        "biggestFanScore": 41.0,
+        "biggestFanName": "Brandon Snow",
+        "biggestFanScore": 44.0,
         "biggestHaterName": "samreintjes",
         "biggestHaterScore": 2.0,
-        "mostLikedName": "Brandon Snow",
-        "mostLikedScore": 39.0,
-        "leastLikedName": "danesvig",
-        "leastLikedScore": 5.0
+        "mostLikedName": "Samantha Snow",
+        "mostLikedScore": 51.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 5.0,
+        "mostSimilarName": "Samantha Snow",
+        "mostSimilarScore": 242.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 26.0
       }
     },
     {
       "name": "Rachel Reynolds",
       "scores": {
         "biggestFanName": "Samantha Snow",
-        "biggestFanScore": 40.0,
+        "biggestFanScore": 55.0,
         "biggestHaterName": "danesvig",
         "biggestHaterScore": 10.0,
         "mostLikedName": "Samantha Snow",
-        "mostLikedScore": 50.0,
-        "leastLikedName": "danesvig",
-        "leastLikedScore": 5.0
+        "mostLikedScore": 65.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 5.0,
+        "mostSimilarName": "Samantha Snow",
+        "mostSimilarScore": 241.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 47.0
       }
     },
     {
       "name": "Samantha Snow",
       "scores": {
         "biggestFanName": "Whitney Elsholz",
-        "biggestFanScore": 74.0,
-        "biggestHaterName": "danesvig",
-        "biggestHaterScore": 0.0,
+        "biggestFanScore": 77.0,
+        "biggestHaterName": "samreintjes",
+        "biggestHaterScore": 3.0,
         "mostLikedName": "Rachel Reynolds",
-        "mostLikedScore": 40.0,
+        "mostLikedScore": 55.0,
         "leastLikedName": "samreintjes",
-        "leastLikedScore": 1.0
+        "leastLikedScore": 1.0,
+        "mostSimilarName": "chay reeves",
+        "mostSimilarScore": 286.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 37.0
       }
     },
     {
       "name": "Taylor",
       "scores": {
         "biggestFanName": "Benj",
-        "biggestFanScore": 34.0,
-        "biggestHaterName": "danesvig",
-        "biggestHaterScore": 10.0,
+        "biggestFanScore": 40.0,
+        "biggestHaterName": "samreintjes",
+        "biggestHaterScore": 13.0,
         "mostLikedName": "Rachel Miles Snow",
-        "mostLikedScore": 41.0,
+        "mostLikedScore": 43.0,
         "leastLikedName": "danesvig",
-        "leastLikedScore": 3.0
+        "leastLikedScore": 3.0,
+        "mostSimilarName": "Samantha Snow",
+        "mostSimilarScore": 194.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 46.0
       }
     },
     {
       "name": "Whitney Elsholz",
       "scores": {
         "biggestFanName": "Rachel Reynolds",
-        "biggestFanScore": 28.0,
+        "biggestFanScore": 35.0,
         "biggestHaterName": "samreintjes",
         "biggestHaterScore": 4.0,
         "mostLikedName": "Samantha Snow",
-        "mostLikedScore": 74.0,
-        "leastLikedName": "danesvig",
-        "leastLikedScore": 7.0
+        "mostLikedScore": 77.0,
+        "leastLikedName": "samreintjes",
+        "leastLikedScore": 7.0,
+        "mostSimilarName": "Samantha Snow",
+        "mostSimilarScore": 241.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 41.0
       }
     },
     {
       "name": "chay reeves",
       "scores": {
-        "biggestFanName": "Harrison Nevels-Reeves",
-        "biggestFanScore": 37.0,
+        "biggestFanName": "Samantha Snow",
+        "biggestFanScore": 51.0,
         "biggestHaterName": "Brandon Snow",
-        "biggestHaterScore": 8.0,
+        "biggestHaterScore": 13.0,
         "mostLikedName": "Samantha Snow",
-        "mostLikedScore": 46.0,
+        "mostLikedScore": 60.0,
         "leastLikedName": "samreintjes",
-        "leastLikedScore": 0.0
+        "leastLikedScore": 0.0,
+        "mostSimilarName": "Samantha Snow",
+        "mostSimilarScore": 286.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 47.0
       }
     },
     {
       "name": "danesvig",
       "scores": {
-        "biggestFanName": "samreintjes",
-        "biggestFanScore": 15.0,
-        "biggestHaterName": "Brandon Snow",
-        "biggestHaterScore": 0.0,
+        "biggestFanName": "Rachel Miles Snow",
+        "biggestFanScore": 20.0,
+        "biggestHaterName": "Taylor",
+        "biggestHaterScore": 3.0,
         "mostLikedName": "Benj",
-        "mostLikedScore": 16.0,
+        "mostLikedScore": 36.0,
         "leastLikedName": "Brandon Snow",
-        "leastLikedScore": 0.0
+        "leastLikedScore": 3.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 119.0,
+        "leastSimilarName": "samreintjes",
+        "leastSimilarScore": 31.0
       }
     },
     {
@@ -140,7 +180,11 @@
         "mostLikedName": "chay reeves",
         "mostLikedScore": 16.0,
         "leastLikedName": "Brandon Snow",
-        "leastLikedScore": 0.0
+        "leastLikedScore": 0.0,
+        "mostSimilarName": "Benj",
+        "mostSimilarScore": 50.0,
+        "leastSimilarName": "Brandon Snow",
+        "leastSimilarScore": 26.0
       }
     }
   ]
