@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/services.dart' show rootBundle; 
+import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
 
 void main() {
@@ -36,167 +37,36 @@ class HomePage extends StatelessWidget {
       appBar: buildMainAppBar("Music Leagues"), 
       body: ListView(  
         children: leagues.map( (league) {
-          return Card(  
-            child: ListTile(  
-              title: Text(league), 
-              onTap: () { 
-                Navigator.push( 
-                  context,  
-                  MaterialPageRoute( 
-                    // builder: (context) => LeaguePage(leagueName: league),
-                    builder: (context) => StatsPage(leagueName: league),  
-                  ),
-                );
-              },
+          return SizedBox(
+            height: 200.0, 
+            width: 300.0,
+            child: Card(  
+              child: ListTile(  
+                title: Center( 
+                  child: Text(
+                    league, 
+                    style: GoogleFonts.roboto( //TextStyle(
+                      fontWeight: FontWeight.bold, 
+                      fontSize: 24,
+                    ),
+                  ), 
+                ),
+                onTap: () { 
+                  Navigator.push( 
+                    context,  
+                    MaterialPageRoute( 
+                      builder: (context) => StatsPage(leagueName: league),  
+                    ),
+                  );
+                },
+              ),
             ),
           );
         }).toList(),
       ),
     );
-
-    //   body: GridView.extent(  
-    //     maxCrossAxisExtent: 500, 
-    //     padding: const EdgeInsets.all(16), 
-    //     crossAxisSpacing: 16, 
-    //     mainAxisSpacing: 16, 
-    //     children: leagues.map( (league) { 
-    //       return buildInkwellCard(league, context);
-    //     }).toList(),
-    //   ),
-    // );
   }
 }
-
-// class LeaguePage extends StatefulWidget {
-//   final String leagueName; 
-//   const LeaguePage({super.key, required this.leagueName});
-
-//   @override
-//   State<LeaguePage> createState() => _LeaguePageState(); 
-// }
-
-// class _LeaguePageState extends State<LeaguePage> {
-//   Future<List<List<dynamic>>>? data;
-
-//   void _loadRound(String roundFile) {
-//     setState(() {
-//       data = loadLeagueRound(widget.leagueName, roundFile);
-//     });
-//   }
-
-//   void _backToRounds() {
-//     setState(() {
-//       selectedRound = null;
-//       data = null;
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     final rounds = leagueRounds[widget.leagueName]!;
-
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(widget.leagueName),
-//         actions: [
-//           if (selectedRound != null)
-//             IconButton(
-//               icon: const Icon(Icons.refresh), // "back to round picker"
-//               onPressed: _backToRounds,
-//               tooltip: "Back to rounds",
-//             ),
-//         ],
-//       ),
-//       body: selectedRound == null
-//           ? ListView(
-//               children: rounds.map((round) {
-//                 return ListTile(
-//                   title: Text(round.replaceAll('.csv', '')),
-//                   onTap: () => _loadRound(round),
-//                 );
-//               }).toList(),
-//             )
-//           : FutureBuilder<List<List<dynamic>>>(
-//               future: data,
-//               builder: (context, snapshot) {
-//                 if (!snapshot.hasData) {
-//                   return const Center(child: CircularProgressIndicator());
-//                 }
-//                 final rows = snapshot.data!;
-
-//                 return ListView(
-//                   children: rows.map((row) {
-//                     return ListTile(
-//                       title: Text(row[0].toString()), // voter/submitter
-//                       subtitle: Text(row.skip(1).join(", ")), // their votes
-//                     );
-//                   }).toList(),
-//                 );
-//               },
-//             ),
-//     );
-//   }
-// }
-
-// class _LeaguePageStart extends State<LeaguePage> {
-//   late Future<List<List<dynamic>>> _data; 
-
-//   @override  
-//   void initState() {
-//     super.initState(); 
-//     _data = loadCsvData(path); //////////////////////
-//   }
-
-// }
-// {
-//   final String leagueName; 
-//   final players = ["Benj", "Daniel", "Ian", "Chase", "Maren", "Emma", "Etc..."];
-
-//   LeaguePage({ required this.leagueName });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(  
-//       appBar: buildMainAppBar("Music Leagues"), 
-//       body: Center( 
-//         child: ConstrainedBox(  
-//           constraints: BoxConstraints( 
-//             minWidth: 300, 
-//             maxWidth: 500, 
-//             minHeight: 100, 
-//             maxHeight: 800, //double.infinity, 
-//           ),
-//           child: Container( 
-//             color: const Color.fromARGB(255, 214, 220, 224),
-//             child: ListView.builder(  
-//               padding: const EdgeInsets.all(16.0), 
-//               itemCount: players.length, 
-//               itemBuilder: (context, index) {
-//                 return ListTile(  
-//                   title: Text(
-//                     players[index], 
-//                     style: TextStyle(fontWeight: FontWeight.bold),
-//                   ), 
-//                   onTap: () {
-//                     Navigator.push( 
-//                       context, 
-//                       MaterialPageRoute( 
-//                         builder: (context) => StatsPage( 
-//                           leagueName: leagueName, 
-//                           playerName: players[index], 
-//                         ),
-//                       ),
-//                     );
-//                   },
-//                 );
-//               },
-//             ),
-//           ),
-//         ), 
-//       ), 
-//     );
-//   }
-// }
 
 class StatsPage extends StatefulWidget { 
   final String leagueName; 
@@ -241,22 +111,173 @@ class _StatsPageState extends State<StatsPage> {
               final personMap = person as Map<String, dynamic>; 
               final scores = personMap["scores"] as Map<String, dynamic>; 
 
-              // final name = entry.key; 
-              // final personStats = entry.value as Map<String, dynamic>; 
+              final N = scores['votesReceivedNames'].length;
+              final votesReceived = List.generate(N, (i) => '(${scores['votesReceivedScores'][i]})  ${scores['votesReceivedNames'][i]}');
+              final votesGiven    = List.generate(N, (i) => '(${scores['votesGivenScores'][i]}) ${scores['votesGivenNames'][i]}');
+              final similarityScores = List.generate(N, (i) => '(${scores['similarityScores'][i]}) ${scores['similarityNames'][i]} ');
+
+
+              final maxReceivedScore = scores['votesReceivedScores'].reduce( (a, b) => a > b ? a : b); 
+              final maxGivenScore = scores['votesGivenScores'].reduce( (a, b) => a > b ? a : b); 
+              final maxSimilarityScore = scores['similarityScores'].reduce( (a, b) => a > b ? a : b); 
+
               return Card(  
-                margin: const EdgeInsets.symmetric(vertical: 8), 
-                child: ListTile(   
-                  title: Text(personMap["name"], style: const TextStyle(fontWeight: FontWeight.bold)), 
+                child: ExpansionTile(  
+                  title: Text(personMap["name"], style: TextStyle(fontWeight: FontWeight.bold)), 
                   subtitle: Text(  
-                    "\t\tBiggest Fan: ${scores['biggestFanName']} (${scores['biggestFanScore']} votes)\n" 
-                    "\t\tBiggest Hater: ${scores['biggestHaterName']} (${scores['biggestHaterScore']} votes)\n" 
-                    "\t\tMost Liked: ${scores['mostLikedName']} (${scores['mostLikedScore']} votes)\n" 
-                    "\t\tLeast Liked: ${scores['leastLikedName']} (${scores['leastLikedScore']} votes)\n"
-                    "\t\tMost Similar Voting: ${scores['mostSimilarName']} (${scores['mostSimilarScore']} votes)\n" 
-                    "\t\tLeast Similar Voting: ${scores['leastSimilarName']} (${scores['leastSimilarScore']} votes)" 
+                    "\tBiggest Fan: ${votesReceived[0]}\n"
+                    "\tMost Liked: ${votesGiven[0]}\n"
+                    "\tMost Similar: ${similarityScores[0]}\n"
                   ),
+                  children: [
+                    Padding( 
+                      padding: const EdgeInsets.all(8.0), 
+                      child: Column(  
+                        crossAxisAlignment: CrossAxisAlignment.start, 
+
+                        // Bar chart?
+                        children: [
+                          Text("Votes Received", style: TextStyle(fontWeight: FontWeight.bold)), 
+                          const SizedBox(height: 4), 
+                          ...List.generate(scores['votesReceivedNames'].length, (i) {
+                            return Padding(  
+                              padding: const EdgeInsets.symmetric(vertical: 4), 
+                              child: BarRow( 
+                                name: scores['votesReceivedNames'][i],  
+                                score: scores['votesReceivedScores'][i], 
+                                maxScore: maxReceivedScore, 
+                              ), 
+                            ); 
+                          }),
+                          const SizedBox(height: 25), 
+
+                          Text("Votes Given", style: TextStyle(fontWeight: FontWeight.bold)), 
+                          const SizedBox(height: 4), 
+                          ...List.generate(scores['votesGivenNames'].length, (i) {
+                            return Padding(  
+                              padding: const EdgeInsets.symmetric(vertical: 4), 
+                              child: BarRow( 
+                                name: scores['votesGivenNames'][i],  
+                                score: scores['votesGivenScores'][i], 
+                                maxScore: maxGivenScore, 
+                              ), 
+                            ); 
+                          }),
+                          const SizedBox(height: 25), 
+
+
+
+                          Text("Similarity Scores", style: TextStyle(fontWeight: FontWeight.bold)), 
+                          const SizedBox(height: 4), 
+                          ...List.generate(scores['similarityNames'].length, (i) {
+                            return Padding(  
+                              padding: const EdgeInsets.symmetric(vertical: 4), 
+                              child: BarRow( 
+                                name: scores['similarityNames'][i],  
+                                score: scores['similarityScores'][i], 
+                                maxScore: maxSimilarityScore, 
+                              ), 
+                            ); 
+                          }),
+                        ],
+
+                        // // Bulletted list
+                        // children: [
+                        //   const SizedBox(height: 8), 
+                        //   Text("Votes Received", style: TextStyle(fontWeight: FontWeight.bold)), 
+                        //   const SizedBox(height: 4), 
+                        //   Padding( 
+                        //     padding: const EdgeInsets.only(left: 16.0), 
+                        //     child: Column(  
+                        //       children: List.generate( 
+                        //         votesReceived.length, 
+                        //         (i) => Padding(  
+                        //           padding: const EdgeInsets.symmetric(vertical: 2), 
+                        //           child: Row(  
+                        //             crossAxisAlignment: CrossAxisAlignment.start,  
+                        //             children: [
+                        //               const Text("* "), 
+                        //               Text(  
+                        //                 "${votesReceived[i]}"
+                        //               )
+                        //             ]
+                        //           )
+                        //         ) 
+                        //       )
+                        //     )
+                        //   )
+                        // ],
+
+
+                        // // Little cards 
+                        // children: [ 
+                        //   Text("Votes Received", style: TextStyle(fontWeight: FontWeight.bold)), 
+                        //   Wrap(  
+                        //     spacing: 8, 
+                        //     runSpacing: 4, 
+                        //     children: List.generate( 
+                        //       votesReceived.length, 
+                        //       (i) => Chip(  
+                        //         label: Text('${votesReceived[i]}'),
+                        //       ),
+                        //     ),
+                        //   ),
+                        //   SizedBox(height: 12), 
+                        //   Text("Votes Given", style: TextStyle(fontWeight: FontWeight.bold)), 
+                        //   Wrap(  
+                        //     spacing: 8, 
+                        //     runSpacing: 4, 
+                        //     children: List.generate(  
+                        //       votesGiven.length, 
+                        //       (i) => Chip(  
+                        //         label: Text('${votesGiven[i]}'), 
+                        //       ),
+                        //     ),
+                        //   ),
+                        //   SizedBox(height: 12), 
+                        //   Text("Similarity Scores", style: TextStyle(fontWeight: FontWeight.bold)), 
+                        //   Wrap(  
+                        //     spacing: 8, 
+                        //     runSpacing: 4, 
+                        //     children: List.generate(  
+                        //       similarityScores.length, 
+                        //       (i) => Chip(  
+                        //         label: Text('${similarityScores[i]}'), 
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ],
+
+
+                      ),
+                    ),
+                  ],
                 ),
               );
+
+              // return Card(  
+              //   child: ExpansionTile(  
+              //     title: Text(  
+              //       personMap["name"],  
+              //       style: TextStyle(fontWeight: FontWeight.bold)
+              //     ), 
+              //     subtitle: Text(  
+              //       "\tBiggest Fan: ${votesReceived[0]}\n"
+              //       "\tMost Liked: ${votesGiven[0]}\n"
+              //       "\tMost Similar: ${similarityScores[0]}\n"
+              //     ),
+              //     children: [
+              //       ListTile( 
+              //         title: Text(
+              //           "Votes Received: ${votesReceived}\n"
+              //           "Votes Given: ${votesGiven}\n"
+              //           "Similarity Scores: ${similarityScores}\n"
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // );
+
             }).toList(),
           );
         }, 
@@ -264,75 +285,6 @@ class _StatsPageState extends State<StatsPage> {
     ); 
   }
 }
-          
-      //     Center(  
-      //   child: SingleChildScrollView(  
-      //     child: Column( 
-      //       children: [
-      //         Text(
-      //           "Statistics for $playerName", 
-      //           style: TextStyle( 
-      //             fontSize: 24, 
-      //             fontWeight: FontWeight.bold, 
-      //           )
-      //         ),
-
-      //         SizedBox(height: 50), 
-
-      //         Center( 
-      //           child: Container( 
-      //             padding: const EdgeInsets.all(16), 
-      //             color: Colors.blue[50], 
-      //             child: SizedBox( 
-      //               height: 300, 
-      //               child: LineChart( 
-      //                 LineChartData( 
-      //                   borderData: FlBorderData(show: true), 
-      //                   titlesData: FlTitlesData( 
-      //                     bottomTitles: AxisTitles( 
-      //                       sideTitles: SideTitles( 
-      //                         showTitles: true, 
-      //                         getTitlesWidget: (value, meta) { 
-      //                           return Text("R${value.toInt() + 1}");
-      //                         },
-      //                       ),
-      //                     ),
-      //                     leftTitles: AxisTitles( 
-      //                       sideTitles: SideTitles( showTitles: true), 
-      //                     ),
-      //                   ) ,
-      //                   lineBarsData: [
-      //                     LineChartBarData( 
-      //                       spots: List.generate( 
-      //                         points.length, 
-      //                         (index) => 
-      //                             FlSpot(index.toDouble(), points[index].toDouble())), 
-      //                       isCurved: true, 
-      //                       color: Colors.deepPurple, 
-      //                       barWidth: 3, 
-      //                       dotData: FlDotData(show: true), 
-      //                     ),
-      //                   ],
-      //                 ),
-      //               ),
-      //             ),
-      //           ),
-      //         ),
-
-      //         Text("Points Received: "), 
-      //         Text("[Plot of points per round?]"), 
-      //         buildStatistic("Most Liked Player (include 2nd and 3rd / all in drop down): "), 
-      //         buildStatistic("Least Liked Player: "), 
-      //         buildStatistic("Biggest Fan: "), 
-      //         buildStatistic("Biggest Hater: "), 
-      //         buildStatistic("Most Similar Taste: "),
-      //       ]
-      //     ),
-      //   ),
-      // ),
-//     );
-//   }
-// }
 
 Text buildStatistic(String title) {
   return Text(  
@@ -341,32 +293,6 @@ Text buildStatistic(String title) {
     textAlign: TextAlign.center,
   );
 }
-
-// Card buildInkwellCard(String leagueName, BuildContext context) {
-//     return Card(  
-//       child: InkWell( 
-//         onTap: () {
-//           Navigator.push( 
-//             context, 
-//             MaterialPageRoute( 
-//               builder: (context) => LeaguePage(leagueName: leagueName), 
-//             ),
-//           );
-//         },
-//         hoverColor: const Color.fromARGB(255, 197, 230, 199),
-//         child: Center(  
-//           child: Text(  
-//             leagueName, 
-//             style: TextStyle(  
-//               fontSize: 18, 
-//               fontWeight: FontWeight.bold
-//             ), 
-//             textAlign: TextAlign.center, 
-//           ),
-//         ),
-//       ),
-//     );
-// }
 
 AppBar buildMainAppBar(String title) {
   return AppBar( 
@@ -383,22 +309,68 @@ AppBar buildMainAppBar(String title) {
   );
 }
 
-// Future<List<List<dynamic>>> loadLeagueRound(String league, String roundFile) async {
-//   final path = 'assets/data/$league/$roundFile';
-//   final rawData = await rootBundle.loadString(path); 
-//   return const CsvToListConverter().convert(rawData);
-// }
-
-// final leagueRounds = {
-//   "virginia_is_for_music_lovers" : ["round1.csv", "round2.csv"], 
-//   "live_the_riv" : ["round1.csv", "round2.csv"], 
-//   "granny_smith" : ["round1.csv", "round2.csv"],
-// };
-
 Future<Map<String, dynamic>> loadStatsJson(String league) async { 
   final path = 'assets/data/$league.json';
   final rawData = await rootBundle.loadString(path);
   return jsonDecode(rawData) as Map<String, dynamic>;
 }
 
+class BarRow extends StatelessWidget { 
+  final String name; 
+  final int score; 
+  final int maxScore; 
+  
+  const BarRow({ 
+    super.key, 
+    required this.name, 
+    required this.score, 
+    required this.maxScore, 
+  }); 
 
+  @override 
+  Widget build(BuildContext context) { 
+    final fraction = maxScore == 0 ? 0.0 : score / maxScore; 
+  
+    return Row(  
+      children: [  
+        SizedBox(  
+          width: 100, 
+          child: Text(  
+            name, overflow: TextOverflow.ellipsis), 
+          ), 
+
+          const SizedBox(width: 8), 
+
+          Expanded(  
+            child: Stack(  
+              children:  [  
+                // Background bar  
+                Container(  
+                  height: 12,  
+                  decoration: BoxDecoration(  
+                    color: Colors.grey.shade300,  
+                    borderRadius: BorderRadius.circular(6), 
+                  ),
+                ),
+
+                // Foreground bar 
+                FractionallySizedBox(  
+                  widthFactor: fraction,  
+                  child: Container(  
+                    height: 12,  
+                    decoration: BoxDecoration(  
+                      color: Colors.blue,  
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(width: 8), 
+          Text(score.toString()), 
+        ],
+      );
+  }
+}

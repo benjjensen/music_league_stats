@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
   fl_chart: ^0.71.0
   csv: ^5.0.2
+  google_fonts: ^7.1.0 # Use the latest version
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -58,6 +59,12 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  # fonts: 
+  #   - family: RobotoMono
+  #     fonts:
+  #       - asset: assets/fonts/RobotoMono-Regular.ttf
+  #       - asset: assets/fonts/RobotoMono-Bold.ttf
+  #         weight: 700
 
   # To add assets to your application, add an assets section, like this:
   assets: 
