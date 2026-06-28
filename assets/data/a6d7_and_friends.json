@@ -1,0 +1,851 @@
+{
+  "people": [
+    {
+      "name": "Adam Campbell",
+      "scores": {
+        "votesReceivedScores": [
+          33.0,
+          30.0,
+          26.0,
+          25.0,
+          24.0,
+          19.0,
+          18.0,
+          14.0,
+          9.0,
+          7.0
+        ],
+        "votesReceivedNames": [
+          "juneykul",
+          "Susie Arnopolin",
+          "Petri Dish",
+          "Carolyn",
+          "Geoffrey K",
+          "Benj",
+          "austin",
+          "Rachel",
+          "Theodore Weinberg",
+          "sarah--bear"
+        ],
+        "votesGivenScores": [
+          40.0,
+          27.0,
+          19.0,
+          17.0,
+          15.0,
+          12.0,
+          8.0,
+          6.0,
+          5.0,
+          1.0
+        ],
+        "votesGivenNames": [
+          "Carolyn",
+          "Geoffrey K",
+          "sarah--bear",
+          "Benj",
+          "juneykul",
+          "Susie Arnopolin",
+          "Theodore Weinberg",
+          "Rachel",
+          "austin",
+          "Petri Dish"
+        ],
+        "similarityScores": [
+          120.0,
+          118.0,
+          118.0,
+          100.0,
+          100.0,
+          89.0,
+          88.0,
+          79.0,
+          75.0,
+          69.0
+        ],
+        "similarityNames": [
+          "Susie Arnopolin",
+          "Geoffrey K",
+          "Carolyn",
+          "juneykul",
+          "Benj",
+          "sarah--bear",
+          "austin",
+          "Theodore Weinberg",
+          "Rachel",
+          "Petri Dish"
+        ]
+      }
+    },
+    {
+      "name": "Benj",
+      "scores": {
+        "votesReceivedScores": [
+          52.0,
+          26.0,
+          23.0,
+          23.0,
+          22.0,
+          22.0,
+          17.0,
+          14.0,
+          7.0,
+          7.0
+        ],
+        "votesReceivedNames": [
+          "sarah--bear",
+          "austin",
+          "juneykul",
+          "Rachel",
+          "Theodore Weinberg",
+          "Petri Dish",
+          "Adam Campbell",
+          "Susie Arnopolin",
+          "Geoffrey K",
+          "Carolyn"
+        ],
+        "votesGivenScores": [
+          21.0,
+          19.0,
+          18.0,
+          17.0,
+          16.0,
+          14.0,
+          14.0,
+          13.0,
+          11.0,
+          7.0
+        ],
+        "votesGivenNames": [
+          "juneykul",
+          "Adam Campbell",
+          "Petri Dish",
+          "Geoffrey K",
+          "sarah--bear",
+          "Theodore Weinberg",
+          "Carolyn",
+          "austin",
+          "Susie Arnopolin",
+          "Rachel"
+        ],
+        "similarityScores": [
+          132.0,
+          112.0,
+          111.0,
+          107.0,
+          103.0,
+          100.0,
+          100.0,
+          94.0,
+          92.0,
+          73.0
+        ],
+        "similarityNames": [
+          "sarah--bear",
+          "juneykul",
+          "Geoffrey K",
+          "austin",
+          "Rachel",
+          "Petri Dish",
+          "Adam Campbell",
+          "Susie Arnopolin",
+          "Theodore Weinberg",
+          "Carolyn"
+        ]
+      }
+    },
+    {
+      "name": "Carolyn",
+      "scores": {
+        "votesReceivedScores": [
+          40.0,
+          26.0,
+          21.0,
+          16.0,
+          15.0,
+          14.0,
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "votesReceivedNames": [
+          "Adam Campbell",
+          "Susie Arnopolin",
+          "Geoffrey K",
+          "juneykul",
+          "Rachel",
+          "sarah--bear",
+          "Benj",
+          "Petri Dish",
+          "austin",
+          "Theodore Weinberg"
+        ],
+        "votesGivenScores": [
+          36.0,
+          25.0,
+          18.0,
+          18.0,
+          15.0,
+          11.0,
+          7.0,
+          7.0,
+          7.0,
+          6.0
+        ],
+        "votesGivenNames": [
+          "Susie Arnopolin",
+          "Adam Campbell",
+          "juneykul",
+          "austin",
+          "Geoffrey K",
+          "Rachel",
+          "sarah--bear",
+          "Theodore Weinberg",
+          "Benj",
+          "Petri Dish"
+        ],
+        "similarityScores": [
+          121.0,
+          118.0,
+          97.0,
+          92.0,
+          91.0,
+          88.0,
+          73.0,
+          72.0,
+          71.0,
+          71.0
+        ],
+        "similarityNames": [
+          "Susie Arnopolin",
+          "Adam Campbell",
+          "Geoffrey K",
+          "juneykul",
+          "austin",
+          "Theodore Weinberg",
+          "Benj",
+          "Rachel",
+          "sarah--bear",
+          "Petri Dish"
+        ]
+      }
+    },
+    {
+      "name": "Geoffrey K",
+      "scores": {
+        "votesReceivedScores": [
+          47.0,
+          29.0,
+          27.0,
+          21.0,
+          20.0,
+          17.0,
+          16.0,
+          15.0,
+          15.0,
+          11.0
+        ],
+        "votesReceivedNames": [
+          "Susie Arnopolin",
+          "Rachel",
+          "Adam Campbell",
+          "Theodore Weinberg",
+          "Petri Dish",
+          "Benj",
+          "austin",
+          "juneykul",
+          "Carolyn",
+          "sarah--bear"
+        ],
+        "votesGivenScores": [
+          24.0,
+          22.0,
+          21.0,
+          20.0,
+          19.0,
+          15.0,
+          11.0,
+          8.0,
+          7.0,
+          3.0
+        ],
+        "votesGivenNames": [
+          "Adam Campbell",
+          "austin",
+          "Carolyn",
+          "Susie Arnopolin",
+          "Petri Dish",
+          "juneykul",
+          "sarah--bear",
+          "Rachel",
+          "Benj",
+          "Theodore Weinberg"
+        ],
+        "similarityScores": [
+          133.0,
+          118.0,
+          112.0,
+          111.0,
+          111.0,
+          107.0,
+          105.0,
+          97.0,
+          91.0,
+          87.0
+        ],
+        "similarityNames": [
+          "Susie Arnopolin",
+          "Adam Campbell",
+          "austin",
+          "juneykul",
+          "Benj",
+          "Rachel",
+          "Petri Dish",
+          "Carolyn",
+          "Theodore Weinberg",
+          "sarah--bear"
+        ]
+      }
+    },
+    {
+      "name": "Petri Dish",
+      "scores": {
+        "votesReceivedScores": [
+          21.0,
+          19.0,
+          18.0,
+          12.0,
+          9.0,
+          8.0,
+          6.0,
+          5.0,
+          4.0,
+          1.0
+        ],
+        "votesReceivedNames": [
+          "Rachel",
+          "Geoffrey K",
+          "Benj",
+          "juneykul",
+          "Theodore Weinberg",
+          "austin",
+          "Carolyn",
+          "Susie Arnopolin",
+          "sarah--bear",
+          "Adam Campbell"
+        ],
+        "votesGivenScores": [
+          32.0,
+          26.0,
+          22.0,
+          20.0,
+          16.0,
+          13.0,
+          11.0,
+          4.0,
+          3.0,
+          3.0
+        ],
+        "votesGivenNames": [
+          "austin",
+          "Adam Campbell",
+          "Benj",
+          "Geoffrey K",
+          "Theodore Weinberg",
+          "Carolyn",
+          "Susie Arnopolin",
+          "sarah--bear",
+          "juneykul",
+          "Rachel"
+        ],
+        "similarityScores": [
+          105.0,
+          100.0,
+          96.0,
+          92.0,
+          91.0,
+          90.0,
+          77.0,
+          74.0,
+          71.0,
+          69.0
+        ],
+        "similarityNames": [
+          "Geoffrey K",
+          "Benj",
+          "Theodore Weinberg",
+          "Rachel",
+          "austin",
+          "juneykul",
+          "sarah--bear",
+          "Susie Arnopolin",
+          "Carolyn",
+          "Adam Campbell"
+        ]
+      }
+    },
+    {
+      "name": "Rachel",
+      "scores": {
+        "votesReceivedScores": [
+          17.0,
+          14.0,
+          11.0,
+          11.0,
+          10.0,
+          8.0,
+          7.0,
+          6.0,
+          5.0,
+          3.0
+        ],
+        "votesReceivedNames": [
+          "Theodore Weinberg",
+          "sarah--bear",
+          "juneykul",
+          "Carolyn",
+          "austin",
+          "Geoffrey K",
+          "Benj",
+          "Adam Campbell",
+          "Susie Arnopolin",
+          "Petri Dish"
+        ],
+        "votesGivenScores": [
+          29.0,
+          23.0,
+          21.0,
+          16.0,
+          15.0,
+          14.0,
+          14.0,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "votesGivenNames": [
+          "Geoffrey K",
+          "Benj",
+          "Petri Dish",
+          "Theodore Weinberg",
+          "Carolyn",
+          "sarah--bear",
+          "Adam Campbell",
+          "juneykul",
+          "austin",
+          "Susie Arnopolin"
+        ],
+        "similarityScores": [
+          107.0,
+          103.0,
+          100.0,
+          100.0,
+          92.0,
+          87.0,
+          81.0,
+          75.0,
+          72.0,
+          68.0
+        ],
+        "similarityNames": [
+          "Geoffrey K",
+          "Benj",
+          "sarah--bear",
+          "Theodore Weinberg",
+          "Petri Dish",
+          "juneykul",
+          "austin",
+          "Adam Campbell",
+          "Carolyn",
+          "Susie Arnopolin"
+        ]
+      }
+    },
+    {
+      "name": "Susie Arnopolin",
+      "scores": {
+        "votesReceivedScores": [
+          36.0,
+          20.0,
+          18.0,
+          13.0,
+          12.0,
+          12.0,
+          11.0,
+          11.0,
+          9.0,
+          6.0
+        ],
+        "votesReceivedNames": [
+          "Carolyn",
+          "Geoffrey K",
+          "austin",
+          "sarah--bear",
+          "Theodore Weinberg",
+          "Adam Campbell",
+          "Petri Dish",
+          "Benj",
+          "juneykul",
+          "Rachel"
+        ],
+        "votesGivenScores": [
+          47.0,
+          30.0,
+          26.0,
+          14.0,
+          10.0,
+          6.0,
+          6.0,
+          5.0,
+          5.0,
+          1.0
+        ],
+        "votesGivenNames": [
+          "Geoffrey K",
+          "Adam Campbell",
+          "Carolyn",
+          "Benj",
+          "austin",
+          "sarah--bear",
+          "juneykul",
+          "Rachel",
+          "Petri Dish",
+          "Theodore Weinberg"
+        ],
+        "similarityScores": [
+          133.0,
+          121.0,
+          120.0,
+          94.0,
+          90.0,
+          86.0,
+          82.0,
+          76.0,
+          74.0,
+          68.0
+        ],
+        "similarityNames": [
+          "Geoffrey K",
+          "Carolyn",
+          "Adam Campbell",
+          "Benj",
+          "juneykul",
+          "austin",
+          "sarah--bear",
+          "Theodore Weinberg",
+          "Petri Dish",
+          "Rachel"
+        ]
+      }
+    },
+    {
+      "name": "Theodore Weinberg",
+      "scores": {
+        "votesReceivedScores": [
+          17.0,
+          16.0,
+          16.0,
+          14.0,
+          13.0,
+          11.0,
+          8.0,
+          7.0,
+          3.0,
+          1.0
+        ],
+        "votesReceivedNames": [
+          "sarah--bear",
+          "Rachel",
+          "Petri Dish",
+          "Benj",
+          "juneykul",
+          "austin",
+          "Adam Campbell",
+          "Carolyn",
+          "Geoffrey K",
+          "Susie Arnopolin"
+        ],
+        "votesGivenScores": [
+          22.0,
+          21.0,
+          20.0,
+          19.0,
+          17.0,
+          12.0,
+          11.0,
+          10.0,
+          9.0,
+          9.0
+        ],
+        "votesGivenNames": [
+          "Benj",
+          "Geoffrey K",
+          "austin",
+          "juneykul",
+          "Rachel",
+          "Susie Arnopolin",
+          "Carolyn",
+          "sarah--bear",
+          "Petri Dish",
+          "Adam Campbell"
+        ],
+        "similarityScores": [
+          109.0,
+          101.0,
+          100.0,
+          96.0,
+          94.0,
+          92.0,
+          91.0,
+          88.0,
+          79.0,
+          76.0
+        ],
+        "similarityNames": [
+          "austin",
+          "sarah--bear",
+          "Rachel",
+          "Petri Dish",
+          "juneykul",
+          "Benj",
+          "Geoffrey K",
+          "Carolyn",
+          "Adam Campbell",
+          "Susie Arnopolin"
+        ]
+      }
+    },
+    {
+      "name": "austin",
+      "scores": {
+        "votesReceivedScores": [
+          32.0,
+          22.0,
+          20.0,
+          18.0,
+          13.0,
+          13.0,
+          13.0,
+          10.0,
+          6.0,
+          5.0
+        ],
+        "votesReceivedNames": [
+          "Petri Dish",
+          "Geoffrey K",
+          "Theodore Weinberg",
+          "Carolyn",
+          "sarah--bear",
+          "juneykul",
+          "Benj",
+          "Susie Arnopolin",
+          "Rachel",
+          "Adam Campbell"
+        ],
+        "votesGivenScores": [
+          26.0,
+          18.0,
+          18.0,
+          16.0,
+          16.0,
+          15.0,
+          12.0,
+          11.0,
+          10.0,
+          8.0
+        ],
+        "votesGivenNames": [
+          "Benj",
+          "Susie Arnopolin",
+          "Adam Campbell",
+          "sarah--bear",
+          "Geoffrey K",
+          "juneykul",
+          "Carolyn",
+          "Theodore Weinberg",
+          "Rachel",
+          "Petri Dish"
+        ],
+        "similarityScores": [
+          112.0,
+          109.0,
+          107.0,
+          99.0,
+          94.0,
+          91.0,
+          91.0,
+          88.0,
+          86.0,
+          81.0
+        ],
+        "similarityNames": [
+          "Geoffrey K",
+          "Theodore Weinberg",
+          "Benj",
+          "sarah--bear",
+          "juneykul",
+          "Petri Dish",
+          "Carolyn",
+          "Adam Campbell",
+          "Susie Arnopolin",
+          "Rachel"
+        ]
+      }
+    },
+    {
+      "name": "juneykul",
+      "scores": {
+        "votesReceivedScores": [
+          21.0,
+          19.0,
+          18.0,
+          15.0,
+          15.0,
+          15.0,
+          6.0,
+          6.0,
+          5.0,
+          3.0
+        ],
+        "votesReceivedNames": [
+          "Benj",
+          "Theodore Weinberg",
+          "Carolyn",
+          "austin",
+          "Geoffrey K",
+          "Adam Campbell",
+          "Susie Arnopolin",
+          "Rachel",
+          "sarah--bear",
+          "Petri Dish"
+        ],
+        "votesGivenScores": [
+          33.0,
+          23.0,
+          16.0,
+          15.0,
+          13.0,
+          13.0,
+          12.0,
+          11.0,
+          9.0,
+          5.0
+        ],
+        "votesGivenNames": [
+          "Adam Campbell",
+          "Benj",
+          "Carolyn",
+          "Geoffrey K",
+          "austin",
+          "Theodore Weinberg",
+          "Petri Dish",
+          "Rachel",
+          "Susie Arnopolin",
+          "sarah--bear"
+        ],
+        "similarityScores": [
+          112.0,
+          111.0,
+          100.0,
+          94.0,
+          94.0,
+          92.0,
+          90.0,
+          90.0,
+          87.0,
+          85.0
+        ],
+        "similarityNames": [
+          "Benj",
+          "Geoffrey K",
+          "Adam Campbell",
+          "austin",
+          "Theodore Weinberg",
+          "Carolyn",
+          "Susie Arnopolin",
+          "Petri Dish",
+          "Rachel",
+          "sarah--bear"
+        ]
+      }
+    },
+    {
+      "name": "sarah--bear",
+      "scores": {
+        "votesReceivedScores": [
+          19.0,
+          16.0,
+          16.0,
+          14.0,
+          11.0,
+          10.0,
+          7.0,
+          6.0,
+          5.0,
+          4.0
+        ],
+        "votesReceivedNames": [
+          "Adam Campbell",
+          "austin",
+          "Benj",
+          "Rachel",
+          "Geoffrey K",
+          "Theodore Weinberg",
+          "Carolyn",
+          "Susie Arnopolin",
+          "juneykul",
+          "Petri Dish"
+        ],
+        "votesGivenScores": [
+          52.0,
+          17.0,
+          14.0,
+          14.0,
+          13.0,
+          13.0,
+          11.0,
+          7.0,
+          5.0,
+          4.0
+        ],
+        "votesGivenNames": [
+          "Benj",
+          "Theodore Weinberg",
+          "Rachel",
+          "Carolyn",
+          "austin",
+          "Susie Arnopolin",
+          "Geoffrey K",
+          "Adam Campbell",
+          "juneykul",
+          "Petri Dish"
+        ],
+        "similarityScores": [
+          132.0,
+          101.0,
+          100.0,
+          99.0,
+          89.0,
+          87.0,
+          85.0,
+          82.0,
+          77.0,
+          71.0
+        ],
+        "similarityNames": [
+          "Benj",
+          "Theodore Weinberg",
+          "Rachel",
+          "austin",
+          "Adam Campbell",
+          "Geoffrey K",
+          "juneykul",
+          "Susie Arnopolin",
+          "Petri Dish",
+          "Carolyn"
+        ]
+      }
+    }
+  ]
+}
