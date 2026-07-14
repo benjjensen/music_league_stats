@@ -25,6 +25,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/* 
+  TODO
+ - Make the drop down score bar smaller 
+ - Put the songs submitted somewhere, too
+ - Show total points 
+*/
+
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
