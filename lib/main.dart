@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  final List<String> leagues = const ["virginia_is_for_music_lovers", "live_the_riv", "granny_smith", "a6d7_and_friends"];
+  final List<String> leagues = const ["Virginia_is_for_Music_Lovers", "Live_the_Riv", "Granny_Smith_", "A6D-7__Friends"];
 
   @override
   Widget build(BuildContext context) {
