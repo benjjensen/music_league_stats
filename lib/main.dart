@@ -27,11 +27,10 @@ class MyApp extends StatelessWidget {
 
 /* 
   TODO
- - Make the drop down score bar smaller 
- - Put the songs submitted somewhere, too
- - Show total points 
+  - In Drop down:
+    - Need to store SONG TITLES + ARTISTS to show in drop down 
+    - Need to store VOTES_PER_ROUND to show in plot
 */
-
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -115,175 +114,102 @@ class _StatsPageState extends State<StatsPage> {
           return ListView(  
             padding: const EdgeInsets.all(16), 
             children: people.map<Widget>( (person) {
+
+
               final personMap = person as Map<String, dynamic>; 
               final scores = personMap["scores"] as Map<String, dynamic>; 
 
-              final N = scores['votesReceivedNames'].length;
-              final votesReceived = List.generate(N, (i) => '(${scores['votesReceivedScores'][i]})  ${scores['votesReceivedNames'][i]}');
-              final votesGiven    = List.generate(N, (i) => '(${scores['votesGivenScores'][i]}) ${scores['votesGivenNames'][i]}');
-              final similarityScores = List.generate(N, (i) => '(${scores['similarityScores'][i]}) ${scores['similarityNames'][i]} ');
+              final receivedNames = (scores['votesReceivedNames'] as List).cast<String>();
+              final votesReceived = (scores['votesReceivedScores'] as List).cast<int>();
 
+              final givenNames = (scores['votesGivenNames'] as List).cast<String>();
+              final votesGiven = (scores['votesGivenScores'] as List).cast<int>();
 
-              final maxReceivedScore = scores['votesReceivedScores'].reduce( (a, b) => a > b ? a : b); 
-              final maxGivenScore = scores['votesGivenScores'].reduce( (a, b) => a > b ? a : b); 
-              final maxSimilarityScore = scores['similarityScores'].reduce( (a, b) => a > b ? a : b); 
+              final similarityNames = (scores['similarityNames'] as List).cast<String>();
+              final similarityScores = (scores['similarityScores'] as List).cast<int>();
+
+              final totalReceived = votesReceived.fold(0, (a, b) => a + b);
+
+              final maxReceivedScore = votesReceived.reduce((a, b) => a > b ? a : b);
+              final biggestFan = receivedNames[ votesReceived.indexOf(maxReceivedScore) ];
+
+              final maxGivenScore = votesGiven.reduce((a, b) => a > b ? a : b);
+              final mostLiked = givenNames[ votesGiven.indexOf(maxGivenScore) ];
+
+              final maxSimilarityScore = similarityScores.reduce((a, b) => a > b ? a : b);
+              final mostSimilar = similarityNames[ similarityScores.indexOf(maxSimilarityScore) ];
+
+    
+              final pointsPerRound = List.generate( 
+                votesReceived.length, 
+                (i) => FlSpot( 
+                  i.toDouble(),                 // x = round number 
+                  votesReceived[i].toDouble(),  // y = score
+                ),
+              );
 
               return Card(  
                 child: ExpansionTile(  
-                  title: Text(personMap["name"], style: TextStyle(fontWeight: FontWeight.bold)), 
+                  title: Text("${personMap["name"]}  (${totalReceived} pts)", style: const TextStyle(fontWeight: FontWeight.bold)), 
                   subtitle: Text(  
-                    "\tBiggest Fan: ${votesReceived[0]}\n"
-                    "\tMost Liked: ${votesGiven[0]}\n"
-                    "\tMost Similar: ${similarityScores[0]}\n"
+                    "\t\tBiggest Fan:    ${biggestFan}  (${votesReceived[0]} pts)\n"
+                    "\t\tMost Liked:     ${mostLiked}  (${votesGiven[0]} pts)\n"
+                    "\t\tMost Similar:   ${mostSimilar}  (${similarityScores[0]} pts)\n"
                   ),
+
+                  // Expanded contents
                   children: [
                     Padding( 
-                      padding: const EdgeInsets.all(8.0), 
+                      padding: const EdgeInsets.fromLTRB(24, 4, 24, 8), //EdgeInsets.all(8.0), 
                       child: Column(  
                         crossAxisAlignment: CrossAxisAlignment.start, 
-
-                        // Bar chart?
                         children: [
-                          Text("Votes Received", style: TextStyle(fontWeight: FontWeight.bold)), 
-                          const SizedBox(height: 4), 
-                          ...List.generate(scores['votesReceivedNames'].length, (i) {
-                            return Padding(  
-                              padding: const EdgeInsets.symmetric(vertical: 4), 
-                              child: BarRow( 
-                                name: scores['votesReceivedNames'][i],  
-                                score: scores['votesReceivedScores'][i], 
-                                maxScore: maxReceivedScore, 
+
+                          // TODO: This is just showing who votes by person, NOT round! 
+                          // scorePlot(pointsPerRound: pointsPerRound),
+                          // const SizedBox(height: 24),  
+
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: buildScoreBar( 
+                                  title: "Votes Received", 
+                                  names: receivedNames, 
+                                  scores: votesReceived, 
+                                  maxScore: maxReceivedScore, 
+                                ), 
                               ), 
-                            ); 
-                          }),
-                          const SizedBox(height: 25), 
 
-                          Text("Votes Given", style: TextStyle(fontWeight: FontWeight.bold)), 
-                          const SizedBox(height: 4), 
-                          ...List.generate(scores['votesGivenNames'].length, (i) {
-                            return Padding(  
-                              padding: const EdgeInsets.symmetric(vertical: 4), 
-                              child: BarRow( 
-                                name: scores['votesGivenNames'][i],  
-                                score: scores['votesGivenScores'][i], 
-                                maxScore: maxGivenScore, 
-                              ), 
-                            ); 
-                          }),
-                          const SizedBox(height: 25), 
+                              const SizedBox(width: 30),   
 
+                              Expanded( 
+                                child: buildScoreBar( 
+                                  title: "Votes Given", 
+                                  names: givenNames, 
+                                  scores: votesGiven, 
+                                  maxScore: maxGivenScore, 
+                                ), 
+                              ),
 
+                              const SizedBox(width: 30),  
 
-                          Text("Similarity Scores", style: TextStyle(fontWeight: FontWeight.bold)), 
-                          const SizedBox(height: 4), 
-                          ...List.generate(scores['similarityNames'].length, (i) {
-                            return Padding(  
-                              padding: const EdgeInsets.symmetric(vertical: 4), 
-                              child: BarRow( 
-                                name: scores['similarityNames'][i],  
-                                score: scores['similarityScores'][i], 
-                                maxScore: maxSimilarityScore, 
-                              ), 
-                            ); 
-                          }),
+                              Expanded(
+                                child: buildScoreBar( 
+                                  title: "Similarity Scores", 
+                                  names: similarityNames, 
+                                  scores: similarityScores, 
+                                  maxScore: maxSimilarityScore,
+                                )
+                              ),                              
+                            ],
+                          ),
                         ],
-
-                        // // Bulletted list
-                        // children: [
-                        //   const SizedBox(height: 8), 
-                        //   Text("Votes Received", style: TextStyle(fontWeight: FontWeight.bold)), 
-                        //   const SizedBox(height: 4), 
-                        //   Padding( 
-                        //     padding: const EdgeInsets.only(left: 16.0), 
-                        //     child: Column(  
-                        //       children: List.generate( 
-                        //         votesReceived.length, 
-                        //         (i) => Padding(  
-                        //           padding: const EdgeInsets.symmetric(vertical: 2), 
-                        //           child: Row(  
-                        //             crossAxisAlignment: CrossAxisAlignment.start,  
-                        //             children: [
-                        //               const Text("* "), 
-                        //               Text(  
-                        //                 "${votesReceived[i]}"
-                        //               )
-                        //             ]
-                        //           )
-                        //         ) 
-                        //       )
-                        //     )
-                        //   )
-                        // ],
-
-
-                        // // Little cards 
-                        // children: [ 
-                        //   Text("Votes Received", style: TextStyle(fontWeight: FontWeight.bold)), 
-                        //   Wrap(  
-                        //     spacing: 8, 
-                        //     runSpacing: 4, 
-                        //     children: List.generate( 
-                        //       votesReceived.length, 
-                        //       (i) => Chip(  
-                        //         label: Text('${votesReceived[i]}'),
-                        //       ),
-                        //     ),
-                        //   ),
-                        //   SizedBox(height: 12), 
-                        //   Text("Votes Given", style: TextStyle(fontWeight: FontWeight.bold)), 
-                        //   Wrap(  
-                        //     spacing: 8, 
-                        //     runSpacing: 4, 
-                        //     children: List.generate(  
-                        //       votesGiven.length, 
-                        //       (i) => Chip(  
-                        //         label: Text('${votesGiven[i]}'), 
-                        //       ),
-                        //     ),
-                        //   ),
-                        //   SizedBox(height: 12), 
-                        //   Text("Similarity Scores", style: TextStyle(fontWeight: FontWeight.bold)), 
-                        //   Wrap(  
-                        //     spacing: 8, 
-                        //     runSpacing: 4, 
-                        //     children: List.generate(  
-                        //       similarityScores.length, 
-                        //       (i) => Chip(  
-                        //         label: Text('${similarityScores[i]}'), 
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ],
-
-
                       ),
                     ),
                   ],
                 ),
               );
-
-              // return Card(  
-              //   child: ExpansionTile(  
-              //     title: Text(  
-              //       personMap["name"],  
-              //       style: TextStyle(fontWeight: FontWeight.bold)
-              //     ), 
-              //     subtitle: Text(  
-              //       "\tBiggest Fan: ${votesReceived[0]}\n"
-              //       "\tMost Liked: ${votesGiven[0]}\n"
-              //       "\tMost Similar: ${similarityScores[0]}\n"
-              //     ),
-              //     children: [
-              //       ListTile( 
-              //         title: Text(
-              //           "Votes Received: ${votesReceived}\n"
-              //           "Votes Given: ${votesGiven}\n"
-              //           "Similarity Scores: ${similarityScores}\n"
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // );
 
             }).toList(),
           );
@@ -296,7 +222,7 @@ class _StatsPageState extends State<StatsPage> {
 Text buildStatistic(String title) {
   return Text(  
     title, 
-    style: TextStyle(fontSize: 18), 
+    style: const TextStyle(fontSize: 18), 
     textAlign: TextAlign.center,
   );
 }
@@ -305,8 +231,8 @@ AppBar buildMainAppBar(String title) {
   return AppBar( 
     backgroundColor: const Color.fromARGB(255, 173, 47, 196),
     title: Text( 
-      "Music Leagues",
-      style: TextStyle( 
+      title,
+      style: const TextStyle( 
         fontSize: 36, 
         fontWeight: FontWeight.bold, 
         color: Colors.white, 
@@ -381,3 +307,91 @@ class BarRow extends StatelessWidget {
       );
   }
 }
+
+
+Widget buildScoreBar({
+  required String title, 
+  required List<String> names, 
+  required List<int> scores, 
+  required int maxScore,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start, 
+    children: [
+      Center(
+        child: Text(
+          title,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ), 
+      const SizedBox(height: 4), 
+      ...List.generate(scores.length, (i) {
+        return Padding(  
+          padding: const EdgeInsets.symmetric(vertical: 4), 
+          child: BarRow( 
+            name: names[i],  
+            score: scores[i], 
+            maxScore: maxScore, 
+          ), 
+        ); 
+      }),
+    ],
+  );
+}
+
+
+Widget scorePlot({ 
+  required List<FlSpot> pointsPerRound,
+}) {
+  return Column( 
+    children: [ 
+      Center(
+        child: const Text(  
+          "Score Per Round", 
+          style: TextStyle( 
+            fontWeight: FontWeight.bold, 
+            fontSize: 18, 
+          )
+        )
+      ),
+
+    Center(
+      child: SizedBox(
+        height: 250,
+        width: 750, 
+        child: LineChart( 
+          LineChartData(  
+            titlesData: FlTitlesData( 
+              topTitles: AxisTitles( 
+                sideTitles: SideTitles(showTitles: false), 
+              ),
+      
+              rightTitles: AxisTitles( 
+                sideTitles: SideTitles(showTitles: false),
+              ),
+      
+              bottomTitles: AxisTitles( 
+                sideTitles: SideTitles( 
+                  showTitles: true, 
+                  getTitlesWidget: (value, meta) { 
+                    return Text("${value.toInt()}");
+                  },
+                ),
+              ),
+            ),
+
+
+            lineBarsData: [ 
+              LineChartBarData(  
+                spots: pointsPerRound, 
+                isCurved: true,
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+    ],
+  );
+}
+
